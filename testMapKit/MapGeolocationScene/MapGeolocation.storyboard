@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uh3-TL-mxw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Geolocation View Controller-->
+        <scene sceneID="ud2-tz-f3k">
+            <objects>
+                <viewController storyboardIdentifier="MapGeolocationSB" id="Uh3-TL-mxw" customClass="MapGeolocationViewController" customModule="testMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gEB-gN-eYQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mqE-of-1mR">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEe-EZ-58d">
+                                <rect key="frame" x="20" y="767" width="170" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dFp-AW-gSI">
+                                        <rect key="frame" x="8" y="28" width="82" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="82" id="qQR-bz-oeb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHj-eB-Saz">
+                                        <rect key="frame" x="105" y="30" width="57" height="30"/>
+                                        <color key="backgroundColor" red="0.16862745100000001" green="0.44705882349999998" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Set">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="setRadiusButtonTappe:" destination="Uh3-TL-mxw" eventType="touchUpInside" id="yA7-X0-8lp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Radius (in meter(s))" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa7-mY-esB">
+                                        <rect key="frame" x="8" y="8" width="154" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aa7-mY-esB" firstAttribute="top" secondItem="xEe-EZ-58d" secondAttribute="top" constant="8" id="7Cs-QF-b5K"/>
+                                    <constraint firstItem="aa7-mY-esB" firstAttribute="leading" secondItem="dFp-AW-gSI" secondAttribute="leading" id="BMM-Q7-A4M"/>
+                                    <constraint firstItem="aa7-mY-esB" firstAttribute="trailing" secondItem="uHj-eB-Saz" secondAttribute="trailing" id="H1M-XC-u0y"/>
+                                    <constraint firstAttribute="bottom" secondItem="dFp-AW-gSI" secondAttribute="bottom" constant="8" id="IYA-4W-niD"/>
+                                    <constraint firstAttribute="width" constant="170" id="KJw-WA-Lbo"/>
+                                    <constraint firstItem="dFp-AW-gSI" firstAttribute="leading" secondItem="xEe-EZ-58d" secondAttribute="leading" constant="8" id="MbC-fL-bXo"/>
+                                    <constraint firstItem="dFp-AW-gSI" firstAttribute="top" secondItem="aa7-mY-esB" secondAttribute="bottom" constant="3" id="Wmr-Is-WJ9"/>
+                                    <constraint firstAttribute="trailing" secondItem="uHj-eB-Saz" secondAttribute="trailing" constant="8" id="YiH-jn-ldT"/>
+                                    <constraint firstAttribute="height" constant="70" id="hKU-Bj-gtg"/>
+                                    <constraint firstItem="uHj-eB-Saz" firstAttribute="centerY" secondItem="dFp-AW-gSI" secondAttribute="centerY" id="hPr-gF-zjO"/>
+                                    <constraint firstItem="uHj-eB-Saz" firstAttribute="leading" secondItem="dFp-AW-gSI" secondAttribute="trailing" constant="15" id="wyv-ej-mFS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eY7-6J-Urd"/>
+                        <color key="backgroundColor" red="0.91372549020000005" green="0.92941176469999998" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mqE-of-1mR" firstAttribute="top" secondItem="eY7-6J-Urd" secondAttribute="top" id="378-3c-lWG"/>
+                            <constraint firstItem="mqE-of-1mR" firstAttribute="trailing" secondItem="eY7-6J-Urd" secondAttribute="trailing" id="6vq-WC-MVC"/>
+                            <constraint firstItem="mqE-of-1mR" firstAttribute="leading" secondItem="eY7-6J-Urd" secondAttribute="leading" id="JuH-FU-b18"/>
+                            <constraint firstItem="xEe-EZ-58d" firstAttribute="leading" secondItem="eY7-6J-Urd" secondAttribute="leading" constant="20" id="dDQ-yJ-c3m"/>
+                            <constraint firstItem="mqE-of-1mR" firstAttribute="bottom" secondItem="eY7-6J-Urd" secondAttribute="bottom" id="qrr-Q1-wBM"/>
+                            <constraint firstItem="eY7-6J-Urd" firstAttribute="bottom" secondItem="xEe-EZ-58d" secondAttribute="bottom" constant="25" id="v6g-WL-AJC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapGeolocation" destination="mqE-of-1mR" id="erG-U7-CI8"/>
+                        <outlet property="userRadiusTextField" destination="dFp-AW-gSI" id="xrD-HW-Asv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkR-n7-3QS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257.97101449275362" y="19.419642857142858"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

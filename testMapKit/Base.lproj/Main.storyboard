@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testMapKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="W8l-98-RrK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snS-pG-4br">
+                                <rect key="frame" x="325" y="798" width="65" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="THj-9A-l5T"/>
+                                    <constraint firstAttribute="height" constant="40" id="gVi-ND-H89"/>
+                                </constraints>
+                                <state key="normal" title="Flyover"/>
+                                <connections>
+                                    <action selector="flyoverTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kw-iL-BeZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W8l-98-RrK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5tX-4O-lQf"/>
+                            <constraint firstItem="snS-pG-4br" firstAttribute="bottom" secondItem="W8l-98-RrK" secondAttribute="bottom" constant="-24" id="D9g-rr-GLb"/>
+                            <constraint firstItem="W8l-98-RrK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vfp-gN-Obl"/>
+                            <constraint firstItem="W8l-98-RrK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XQ3-28-ucr"/>
+                            <constraint firstItem="snS-pG-4br" firstAttribute="trailing" secondItem="W8l-98-RrK" secondAttribute="trailing" constant="-24" id="YOh-Ig-pRc"/>
+                            <constraint firstItem="W8l-98-RrK" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="tKX-re-GFG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flyoverButton" destination="snS-pG-4br" id="ttS-29-6Za"/>
+                        <outlet property="mapView" destination="W8l-98-RrK" id="Gnv-b5-mu3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-313.04347826086956" y="77.678571428571431"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
